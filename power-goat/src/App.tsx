@@ -2,12 +2,24 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import './App.css';
 import { Button } from '@mui/material';
+import powergoats from './powergoats.json';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div className='App'>
+      <div>
+        <ul>
+          {powergoats.map((record, i) => (
+            <li key={i}>
+              {record.id} - {record.name} {record.skill}
+              {record.story}
+            </li>
+          ))}
+        </ul>
+      </div>
+
       <div>
         <a href='https://vitejs.dev' target='_blank'>
           <img src='/vite.svg' className='logo' alt='Vite logo' />

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "name": "Billy",
+    "skill": "Cooking",
+    "story": "Billy was born in the kitchen."
+  },
+  {
+    "id": "2",
+    "name": "Adele",
+    "skill": "Singing",
+    "story": "Adele was born chasing pavements."
+  }
+]
