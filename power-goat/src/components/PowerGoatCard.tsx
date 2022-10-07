@@ -20,19 +20,21 @@ export interface PowerGoatCardProps {
   ));
 }
 
-export const PowerGoatCard = ({ name, skill, story }: PowerGoatCardProps) => {
-  <Card>
-    <CardContent>
-      <Stack spacing={2}>
-        <Typography>{name}</Typography>
-        <Typography>{skill}</Typography>
-        <Typography>{story}</Typography>
-      </Stack>
-      <CardActions>
-        <Button>Check the Power Goat</Button>
-      </CardActions>
-    </CardContent>
-  </Card>;
+const PowerGoatCard = ({ name, skill, story }: PowerGoatCardProps) => {
+  return (
+    <Card>
+      <CardContent>
+        <Stack spacing={2}>
+          <Typography>{name}</Typography>
+          <Typography>{skill}</Typography>
+          <Typography>{story}</Typography>
+        </Stack>
+        <CardActions>
+          <Button>Check the Power Goat</Button>
+        </CardActions>
+      </CardContent>
+    </Card>
+  );
 };
 
 export default PowerGoatCard;
