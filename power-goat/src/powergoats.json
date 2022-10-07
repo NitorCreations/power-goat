@@ -10,5 +10,11 @@
     "name": "Adele",
     "skill": "Singing",
     "story": "Adele was born chasing pavements."
+  },
+  {
+    "id": "3",
+    "name": "Kurt",
+    "skill": "Dancing",
+    "story": "Kurt dances like no tomorrow."
   }
 ]
