@@ -1,9 +1,9 @@
-import * as React from "react";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import { Card, Stack, Typography } from "@mui/material";
-import powergoats from "../powergoats.json";
+import * as React from 'react';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import { Card, Stack, Typography } from '@mui/material';
+import powergoats from '../powergoats.json';
 
 export interface PowerGoatCardProps {
   name: string;
@@ -25,12 +25,18 @@ const PowerGoatCard = ({ name, skill, story }: PowerGoatCardProps) => {
     <Card>
       <CardContent>
         <Stack spacing={2}>
-          <Typography>{name}</Typography>
-          <Typography>{skill}</Typography>
-          <Typography>{story}</Typography>
+          <Typography variant='h5' align='left'>
+            {name}
+          </Typography>
+          <Typography variant='body2' align='left'>
+            {skill}
+          </Typography>
+          <Typography variant='body2' align='left'>
+            {story}
+          </Typography>
         </Stack>
-        <CardActions>
-          <Button>Check the Power Goat</Button>
+        <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <Button>Check the Goat</Button>
         </CardActions>
       </CardContent>
     </Card>
