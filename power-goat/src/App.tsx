@@ -1,5 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { Button, Typography } from "@mui/material";
 import powergoats from "./powergoats.json";
