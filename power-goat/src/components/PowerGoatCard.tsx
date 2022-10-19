@@ -25,7 +25,7 @@ const PowerGoatCard = ({ name, skill, story }: PowerGoatCardProps) => {
     <Card>
       <CardMedia
         component="img"
-        height="140"
+        height="100%"
         src={`/images/${name}.png`} //This works if the filename is EXACTLY same as goat "name"
         alt={`Here is ${name}`}
         sx={{ pt: 3 }}
