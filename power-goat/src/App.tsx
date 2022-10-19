@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { Button, Typography, ThemeProvider } from "@mui/material";
+import { Button, Typography, ThemeProvider, Grid } from "@mui/material";
 import powergoats from "./powergoats.json";
 import PowerGoatCard from "./components/PowerGoatCard";
 import { Stack } from "@mui/system";
@@ -12,11 +12,15 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <Stack spacing={2}>
+        <Stack spacing={3}>
           <Typography>Here are our greatest Power Goats:</Typography>
-          {powergoats.map((cardProps) => (
-            <PowerGoatCard {...cardProps} />
-          ))}
+          <Grid container spacing={2}>
+            {powergoats.map((cardProps) => (
+              <Grid item xs={12} sm={6} md={4}>
+                <PowerGoatCard {...cardProps} />
+              </Grid>
+            ))}
+          </Grid>
         </Stack>
 
         <div className="card">
