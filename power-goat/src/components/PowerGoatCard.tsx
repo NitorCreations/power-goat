@@ -1,10 +1,10 @@
-import * as React from "react";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import { Card, CardMedia, Stack, Typography } from "@mui/material";
-import powergoats from "../powergoats.json";
-import BillyTheGoat from "../assets/BillyTheGoat.jpg";
+import * as React from 'react';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import { Card, CardMedia, Stack, Typography } from '@mui/material';
+import powergoats from '../powergoats.json';
+import BillyTheGoat from '../assets/Billy.png';
 
 export interface PowerGoatCardProps {
   name: string;
@@ -24,20 +24,25 @@ export interface PowerGoatCardProps {
 const PowerGoatCard = ({ name, skill, story }: PowerGoatCardProps) => {
   return (
     <Card>
-      <CardMedia component="img" height="140" image={BillyTheGoat} alt="It is Billy!" />
+      <CardMedia
+        component='img'
+        height='140'
+        image={BillyTheGoat}
+        alt='It is Billy!'
+      />
       <CardContent>
         <Stack spacing={2}>
-          <Typography variant="h5" align="left">
+          <Typography variant='h5' align='left'>
             {name}
           </Typography>
-          <Typography variant="body2" align="left">
+          <Typography variant='body2' align='left'>
             {skill}
           </Typography>
-          <Typography variant="body2" align="left">
+          <Typography variant='body2' align='left'>
             {story}
           </Typography>
         </Stack>
-        <CardActions sx={{ display: "flex", justifyContent: "flex-end" }}>
+        <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
           <Button>Check the Goat</Button>
         </CardActions>
       </CardContent>
