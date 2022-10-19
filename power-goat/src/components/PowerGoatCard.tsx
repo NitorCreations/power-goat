@@ -5,8 +5,11 @@ import Button from '@mui/material/Button';
 import { Card, CardMedia, Stack, Typography } from '@mui/material';
 import powergoats from '../powergoats.json';
 import BillyTheGoat from '../assets/Billy.png';
+import KurtTheGoat from '../assets/Kurt.png';
+import AdeleTheGoat from '../assets/Adele.png';
 
 export interface PowerGoatCardProps {
+  //Should this include id, image and alt text?
   name: string;
   skill: string;
   story: string;
@@ -17,6 +20,7 @@ export interface PowerGoatCardProps {
     <li key={i}>
       {record.id} - {record.name} {record.skill}
       {record.story}
+      {/* Should this include id, image and alt text?*/}
     </li>
   ));
 }
@@ -27,8 +31,8 @@ const PowerGoatCard = ({ name, skill, story }: PowerGoatCardProps) => {
       <CardMedia
         component='img'
         height='140'
-        image={BillyTheGoat}
-        alt='It is Billy!'
+        src={AdeleTheGoat} // We'd want this to be a reference to one of our Goat images
+        alt="I'd rather have this alt text from json" // We'd want this to be a reference to the correct Goat image alt text
       />
       <CardContent>
         <Stack spacing={2}>
