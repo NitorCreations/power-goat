@@ -1,17 +1,30 @@
-import { useState } from "react";
-import "./App.css";
-import { Button, Typography, ThemeProvider, Grid } from "@mui/material";
-import powergoats from "./powergoats.json";
-import PowerGoatCard from "./components/PowerGoatCard";
-import { Stack } from "@mui/system";
-import { theme } from "../theme/theme";
+import { useState } from 'react';
+import './App.css';
+import {
+  Button,
+  Typography,
+  ThemeProvider,
+  Grid,
+  ListItem,
+  CardMedia,
+  styled,
+  Box,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from '@mui/material';
+import powergoats from './powergoats.json';
+import PowerGoatCard from './components/PowerGoatCard';
+import { Stack } from '@mui/system';
+import { theme } from '../theme/theme';
+import { ArrowBack, Favorite, Star } from '@mui/icons-material';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
+      <div className='App'>
         <Stack spacing={3}>
           <Typography>Here are our greatest Power Goats:</Typography>
           <Grid container spacing={2}>
@@ -23,8 +36,11 @@ function App() {
           </Grid>
         </Stack>
 
-        <div className="card">
-          <Button variant="contained" onClick={() => setCount((count) => count + 1)}>
+        <div className='card'>
+          <Button
+            variant='contained'
+            onClick={() => setCount((count) => count + 1)}
+          >
             count is {count}
           </Button>
         </div>
